@@ -1,0 +1,31 @@
+.listItem{
+    height: 5vh;
+    box-shadow: black 1px 2px 3px;
+    display: flex;
+    margin-top: 2px;
+    padding-top: 7px;
+    justify-content:flex-start;
+    border-radius: 5px;
+}
+
+.listItem:hover {
+    height: 6vh;
+}
+
+
+.listItem > h1{
+    margin: auto;
+    margin-left: unset;
+    margin-right: unset;
+    font-size: large;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.listItem > p{
+    margin: auto;
+    margin-left: unset;
+    margin-right: unset;
+    font-size: medium;
+    margin-left: 10px;
+}

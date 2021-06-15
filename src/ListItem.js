@@ -4,9 +4,27 @@ import "./ListItem.css";
 function ListItem() {
 
     return (
+        <>
         <div className="listItem">
-            <h1>list item</h1>
+            <h1>Search term</h1>
+            <p>Defination</p>
         </div>
+        <div className="listItem">
+            <h1>Search term</h1>
+            <p>Defination</p>
+
+        </div>
+        <div className="listItem">
+            <h1>Search term</h1>
+            <p>Defination</p>
+
+        </div>
+        <div className="listItem">
+            <h1>Search term</h1>
+            <p>Defination</p>
+
+        </div>
+        </>
     )
 }
 
