@@ -2,8 +2,21 @@ require("dotenv").config();
 const express= require("express");
 const axios = require("axios");
 const app=express();
+const mongoose= require("mongoose");
 
 app.use(express.json());
+
+const MongoURL= "";
+
+mongoose.connect(MongoURL, {useNewUrlParser:true});
+
+const dictionarySchema= {
+    term: String,
+    definition: String,
+    phrase: String
+}
+
+const Item= mongoose.model("Item", dictionarySchema);
 
 app.get("/", function (req, res){
     res.send("hello world");
@@ -36,6 +49,10 @@ const instance = axios.create({
 //       console.error(err);
 //     }
 //   });
+
+app.post("/searchKey", function(req, res){
+
+});
 
 app.listen(4000, function(){
     console.log("server up and running at port 4000");
