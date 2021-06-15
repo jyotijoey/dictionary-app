@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Container.css";
 
 function Container() {
     return (
         <div className="container">
-            <h1>Container component</h1>
+            
         </div>
     )
 }
