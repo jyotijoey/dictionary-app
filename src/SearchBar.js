@@ -1,12 +1,17 @@
 import React from 'react';
 import "./SearchBar.css";
+import SearchIcon from '@material-ui/icons/Search';
 
 function SearchBar() {
     return (
+        <>
         <div className="searchBar">
-            {/* <h1>this is the seacrvh bar</h1> */}
+            <input type="text" /> 
+            <SearchIcon className="searchBar__icon"/>
         </div>
+        
+        </>
     )
 }
 
-export default SearchBar
+export default SearchBar;
