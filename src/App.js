@@ -1,11 +1,12 @@
 import './App.css';
 import Container from "./Container";
-import ListItem from "./ListItem";
+import SearchBar from "./SearchBar";
 
 function App() {
   return (
     // using BEM
     <div className="app"> 
+      <SearchBar />
       <Container />
     </div>
   );
