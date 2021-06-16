@@ -6,9 +6,12 @@ const mongoose= require("mongoose");
 
 app.use(express.json());
 
-const MongoURL= "";
+const MongoURL= process.env.URL;
 
-mongoose.connect(MongoURL, {useNewUrlParser:true});
+mongoose.connect(MongoURL, {
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+ });
 
 const dictionarySchema= {
     term: String,
@@ -31,27 +34,28 @@ const instance = axios.create({
     }
   });
 
-// app.get('/search', (req, res) => {
-//     // const lang = 'en-us';
-//     // const input = req.body.oxford;
-//     try {
-//       instance.get(`/api/v2/entries/en-us/apple`)
-//         .then(result => {
-//         //   const data = {
-//         //     "definition": result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
-//         //     "phrases": result.data.results[0].lexicalEntries[0].phrases[0].text
-//         //   }
-//           res.status(200).send(result.data)
-//         })
-//         .catch(err => res.send(err));
-//     }
-//     catch (err) {
-//       console.error(err);
-//     }
-//   });
+app.get('/search', (req, res) => {
+    // const lang = 'en-us';
+    const input = req.body;
+    console.log(input);
+    // try {
+    //   instance.get(`/api/v2/entries/en-us/apple`)
+    //     .then(result => {
+    //       const data = {
+    //         "definition": result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
+    //         "phrases": result.data.results[0].lexicalEntries[0].phrases[0].text
+    //       }
+    //       res.status(200).send(result.data)
+    //     })
+    //     .catch(err => res.send(err));
+    // }
+    // catch (err) {
+    //   console.error(err);
+    // }
+  });
 
-app.post("/searchKey", function(req, res){
-
+app.post("/search", function(req, res){
+    console.log(req.body);
 });
 
 app.listen(4000, function(){

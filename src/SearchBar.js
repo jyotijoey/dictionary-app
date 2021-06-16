@@ -3,12 +3,12 @@ import "./SearchBar.css";
 import SearchIcon from '@material-ui/icons/Search';
 
 function SearchBar() {
-    const [input, setInput] = useState(" ");
+    const [input, setInput] = useState("");
     return (
-        <div className="searchBar">
+        <form action="http://localhost:4000/search" method="post" className="searchBar">
             <input type="text" onChange={(e)=> {setInput(e.target.value); console.log(input)}} value={input}/> 
-            <SearchIcon onClick={()=> input} className="searchBar__icon"/>
-        </div>
+            <button type="submit" onClick={()=> console.log(input)}><SearchIcon className="searchBar__icon"/></button>
+        </form>
     )
 }
 
