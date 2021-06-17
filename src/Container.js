@@ -2,10 +2,10 @@ import React from 'react';
 import "./Container.css";
 import ListItem from "./ListItem";
 
-function Container() {
+function Container({item}) {
     return (
         <div className="container">
-            <ListItem />
+            <ListItem item={item} />
         </div>
     )
 }

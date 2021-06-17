@@ -1,31 +1,20 @@
-import React from 'react';
+// import axios from 'axios';
+import React from "react";
 import "./ListItem.css";
 
-function ListItem() {
-
-    return (
-        <>
-        <div className="listItem">
-            <h1>Search term</h1>
-            <p>Defination</p>
-        </div>
-        <div className="listItem">
-            <h1>Search term</h1>
-            <p>Defination</p>
-
-        </div>
-        <div className="listItem">
-            <h1>Search term</h1>
-            <p>Defination</p>
-
-        </div>
-        <div className="listItem">
-            <h1>Search term</h1>
-            <p>Defination</p>
-
-        </div>
-        </>
-    )
+function ListItem({ item }) {
+  return (
+    <>
+      {item.map(({term, definition, phrase}) => {
+        return (
+          <div className="listItem">
+            <h1>{term}</h1>
+            <p>{definition.substring(0, 35)}...</p>
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
 export default ListItem;
