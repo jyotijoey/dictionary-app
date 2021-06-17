@@ -1,16 +1,39 @@
 // import axios from 'axios';
-import React from "react";
+import React, { useState } from "react";
 import "./ListItem.css";
-import Display from "./Display";
+import Modal from "react-modal";
+import CloseIcon from '@material-ui/icons/Close';
 
 function ListItem({ item }) {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState({})
+
+  function HandleClick(_id, term, definition, phrase) {
+    setValue({_id, term, definition, phrase});
+    setOpen(true);
+    console.log(value);
+    console.log(value._id);
+  }
   return (
     <>
-      {item.map(({term, definition, phrase, _id}) => {
+      {item.map(({ term, definition, phrase, _id }) => {
         return (
-          <div key={_id} className="listItem" onClick={()=> console.log(_id, "got clicked")}>
+          <div>
+          <div
+            key={_id}
+            className="listItem"
+            onClick={() => HandleClick(_id, term, definition, phrase)}
+          >
             <h1>{term}</h1>
             <p>{definition.substring(0, 35)}...</p>
+          </div>
+          <Modal className="listItem__modal" isOpen={open}>
+            <h1>{value.term}
+            <button className="listItem__btn" onClick={()=>setOpen(false)}><CloseIcon /></button>
+            </h1>
+            
+            <p>{value.definition}</p>
+          </Modal>
           </div>
         );
       })}

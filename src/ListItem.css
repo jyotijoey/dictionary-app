@@ -29,3 +29,28 @@
     font-size: medium;
     margin-left: 10px;
 }
+
+.listItem__modal{
+    background-color:whitesmoke;
+    height: 100vh;
+    width: 30vw;
+    border: 1px solid ghostwhite;
+    border-radius: 20px;
+    position: fixed;
+}
+.listItem__modal >h1{
+    text-align: center;
+}
+.listItem__modal >p{
+    text-align: justify;
+    padding: 35px;
+}
+.listItem__btn{
+    background-color: white;
+    position:fixed;
+    margin-left: 5vw;
+    margin-top: 9px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 2px 2px 2px ghostwhite;
+}

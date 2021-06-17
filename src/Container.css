@@ -4,6 +4,7 @@
     width: 30vw;
     position: fixed;
     margin-top: 15vh;
+    overflow:auto;
     /* border: 1px solid black; */
     /* border-radius: 15px 15px 5px 5px; */
 }

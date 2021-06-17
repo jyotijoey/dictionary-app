@@ -20,7 +20,7 @@ mongoose.connect(MongoURL, {
 const dictionarySchema= mongoose.Schema({
     term: String,
     definition: String,
-    phrase1: String
+    phrase: String
 })
 
 const Item= mongoose.model("Item", dictionarySchema);
@@ -51,7 +51,6 @@ app.get("/search", (req, res) => {
   });
 
 app.post("/search", function(req, res){
-    console.log(JSON.stringify(req));
     const input = req.body.term;
     console.log(input);
     try {

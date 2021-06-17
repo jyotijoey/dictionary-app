@@ -10,6 +10,8 @@ function SearchBar() {
     });
     function Submit(e){
         e.preventDefault();
+        console.log("13");
+        console.log(input);
         axios.post("http://localhost:4000/search",{
             term: input.term
         })
