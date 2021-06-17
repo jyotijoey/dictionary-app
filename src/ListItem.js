@@ -16,7 +16,7 @@ function ListItem({ item }) {
   }
   return (
     <>
-      {item.map(({ term, definition, phrase, _id }) => {
+      {item.map(({ term, definition, phrase, _id, sDefinition }) => {
         return (
           <div>
           <div
@@ -24,8 +24,9 @@ function ListItem({ item }) {
             className="listItem"
             onClick={() => HandleClick(_id, term, definition, phrase)}
           >
-            <h1>{term}</h1>
-            <p>{definition.substring(0, 35)}...</p>
+            <h1>{term.toUpperCase()}:</h1>
+            <p>{sDefinition}</p>
+            <p>{definition.substring(0, 30).toUpperCase()}...</p>
           </div>
           <Modal className="listItem__modal" isOpen={open}>
             <h1>{value.term}

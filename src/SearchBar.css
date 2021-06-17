@@ -19,3 +19,8 @@
     padding-top: 10px;
     position: absolute;
 }
+
+form> button{
+ background-color: unset;
+ border:none;
+}

@@ -15,7 +15,8 @@
 
 .listItem > h1{
     margin: auto;
-    margin-left: unset;
+    flex:0.3;
+    margin-left: 10%;
     margin-right: unset;
     font-size: large;
     font-weight: 800;
@@ -23,6 +24,7 @@
 }
 
 .listItem > p{
+    flex: 0.7;
     margin: auto;
     margin-left: unset;
     margin-right: unset;
@@ -36,7 +38,8 @@
     width: 30vw;
     border: 1px solid ghostwhite;
     border-radius: 20px;
-    position: fixed;
+    position: relative;
+    margin: auto;
 }
 .listItem__modal >h1{
     text-align: center;
@@ -52,5 +55,5 @@
     margin-top: 9px;
     border-radius: 100px;
     border: none;
-    box-shadow: 2px 2px 2px ghostwhite;
+    box-shadow: 2px 2px 2px 2px ghostwhite;
 }

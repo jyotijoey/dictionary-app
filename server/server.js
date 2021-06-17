@@ -20,7 +20,8 @@ mongoose.connect(MongoURL, {
 const dictionarySchema= mongoose.Schema({
     term: String,
     definition: String,
-    phrase: String
+    phrase: String,
+    sDefinition: String
 })
 
 const Item= mongoose.model("Item", dictionarySchema);
@@ -61,6 +62,7 @@ app.post("/search", function(req, res){
             term: input,
             definition: result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
             phrase: result.data.results[0].lexicalEntries[0].phrases[0].text,
+            sDefinition:result.data.results[0].lexicalEntries[0].entries[0].senses[0].shortDefinitions[0]
           }
           console.log("65");
           Item.create(post, (err, data) => {
