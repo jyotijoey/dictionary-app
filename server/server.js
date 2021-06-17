@@ -3,8 +3,12 @@ const express= require("express");
 const axios = require("axios");
 const app=express();
 const mongoose= require("mongoose");
+const cors= require("cors");
+
 
 app.use(express.json());
+// app.use(express.urlencoded());
+app.use(cors());
 
 const MongoURL= process.env.URL;
 
@@ -13,11 +17,11 @@ mongoose.connect(MongoURL, {
     useUnifiedTopology: true
  });
 
-const dictionarySchema= {
+const dictionarySchema= mongoose.Schema({
     term: String,
     definition: String,
-    phrase: String
-}
+    phrase1: String
+})
 
 const Item= mongoose.model("Item", dictionarySchema);
 
@@ -34,28 +38,51 @@ const instance = axios.create({
     }
   });
 
-app.get('/search', (req, res) => {
-    // const lang = 'en-us';
-    const input = req.body;
-    console.log(input);
-    // try {
-    //   instance.get(`/api/v2/entries/en-us/apple`)
-    //     .then(result => {
-    //       const data = {
-    //         "definition": result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
-    //         "phrases": result.data.results[0].lexicalEntries[0].phrases[0].text
-    //       }
-    //       res.status(200).send(result.data)
-    //     })
-    //     .catch(err => res.send(err));
-    // }
-    // catch (err) {
-    //   console.error(err);
-    // }
+app.get("/search", (req, res) => {
+
+    Item.find({},(err,data)=>{
+        if(err){
+            res.status(500).send(err);
+        }
+        else{
+            res.status(200).send(data);
+        }
+    });
   });
 
 app.post("/search", function(req, res){
-    console.log(req.body);
+    console.log(req);
+    const input = req.body.term;
+    console.log(input);
+    try {
+      instance.get(`/api/v2/entries/en-us/${input}`)
+        .then(result => {
+            console.log("59");
+          const post = {
+            term: input,
+            definition: result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
+            phrase: result.data.results[0].lexicalEntries[0].phrases[0].text,
+          }
+          console.log("65");
+          Item.create(post, (err, data) => {
+              console.log("66");
+            if(err){
+                res.status(500).send(err);
+                console.log(err);
+            }
+            else{
+                console.log("72");
+                res.status(201).send(data);
+            }
+        })
+        console.log("75");
+        //   res.status(200).console.log(result.data);
+        })
+        .catch(err => res.send(err));
+    }
+    catch (err) {
+      console.error(err);
+    }
 });
 
 app.listen(4000, function(){
