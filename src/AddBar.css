@@ -2,14 +2,20 @@
     background-color: white;
     position: fixed;
     height:5%;
-    width: 29vw;
+    width: 20vw; 
+    /* 29vw; */
     border-radius: 15px;
-    margin-top: 5px;
+    margin-left:60px;
+    margin-top: 88vh;
     border: none;
-    margin-left: 1.9px;
     text-align: center;
     font-size: large;
     padding-right: 5px;
+}
+.searchBar > input:hover{
+    margin-top: 86vh;
+    margin-left: 58px;
+    padding: 10px;
 }
 .searchBar{
     display:flex;

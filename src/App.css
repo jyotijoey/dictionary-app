@@ -8,3 +8,27 @@
   position: relative;
   margin: auto;
 }
+
+.app> button{
+  margin-top: 93vh;
+  margin-left: 49%;
+}
+
+.app__modal{
+  background-color: brown;
+  height: 50vh;
+  width: 30vw;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+  margin-top: 40vh;
+}
+.app__modal> button{
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  margin-left: 47%;
+  margin-top: 50%;
+}

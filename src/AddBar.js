@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./SearchBar.css";
+import "./AddBar.css";
 import SearchIcon from '@material-ui/icons/Search';
 import axios from 'axios';
 
@@ -38,8 +38,12 @@ function SearchBar() {
                 type="text"
                 onChange={(e)=> Handle(e)}  
                 name="term"
+                placeholder="Add a new term"
+                autoComplete="off"
             /> 
-            <button onSubmit={()=> input} type="submit"><SearchIcon className="searchBar__icon"/></button>
+            <button onSubmit={()=> input} type="submit">
+            {/* <SearchIcon className="searchBar__icon"/> */}
+            </button>
         </form>
         
     )
