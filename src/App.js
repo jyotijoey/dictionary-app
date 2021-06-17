@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Container from "./Container";
 import AddBar from "./AddBar";
+import SearchBar from "./SearchBar"
 
 function App() {
   const [item, setItem] = useState([]);
@@ -21,7 +22,8 @@ useEffect(() => {
 
   return (
     // using BEM
-    <div className="app"> 
+    <div className="app">
+      <SearchBar /> 
       <Container item={item} />
       <AddBar />
     </div>
