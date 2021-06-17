@@ -21,7 +21,9 @@ const dictionarySchema= mongoose.Schema({
     term: String,
     definition: String,
     phrase: String,
-    sDefinition: String
+    sDefinition: String,
+    phrase2: String,
+    spell: String
 })
 
 const Item= mongoose.model("Item", dictionarySchema);
@@ -62,7 +64,9 @@ app.post("/search", function(req, res){
             term: input,
             definition: result.data.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0],
             phrase: result.data.results[0].lexicalEntries[0].phrases[0].text,
-            sDefinition:result.data.results[0].lexicalEntries[0].entries[0].senses[0].shortDefinitions[0]
+            sDefinition: result.data.results[0].lexicalEntries[0].entries[0].senses[0].shortDefinitions[0],
+            phrase2: result.data.results[0].lexicalEntries[0].phrases[3].text,
+            spell: result.data.results[0].lexicalEntries[0].entries[0].pronunciations[0].phoneticSpelling
           }
           console.log("65");
           Item.create(post, (err, data) => {

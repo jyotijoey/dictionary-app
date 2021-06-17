@@ -25,7 +25,6 @@ function ListItem({ item }) {
             onClick={() => HandleClick(_id, term, definition, phrase)}
           >
             <h1>{term.toUpperCase()}:</h1>
-            <p>{sDefinition}</p>
             <p>{definition.substring(0, 30).toUpperCase()}...</p>
           </div>
           <Modal className="listItem__modal" isOpen={open}>
