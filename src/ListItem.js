@@ -24,6 +24,8 @@ function ListItem({ item }) {
   }
   return (
     <>
+    <h3 className="listItem__header">Word List</h3>
+    <div className="listItem__border"></div>
       {item.map(
         ({ term, definition, phrase, _id, sDefinition, spell, phrase2 }) => {
           return (
@@ -43,9 +45,10 @@ function ListItem({ item }) {
                   )
                 }
               >
-                <h1>{term.toUpperCase()}:</h1>
-                <p>{sDefinition?.substring(0, 30).toUpperCase()}...</p>
+                <h1>{term}</h1>
+                <p>{sDefinition}</p>
               </div>
+              <div className="listItem__border"></div>
 
               <Modal className="listItem__modal" isOpen={open}>
               <button
