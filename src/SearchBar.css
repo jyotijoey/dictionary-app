@@ -15,9 +15,14 @@
     display:flex;
 }
 .searchBar__icon{
+    margin-top: 5px;
     margin-left:27vw;
     padding-top: 10px;
     position: absolute;
+}
+
+.searchBar__icon:hover{
+    margin-top: 4px;
 }
 
 form> button{

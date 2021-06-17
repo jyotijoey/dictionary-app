@@ -9,7 +9,7 @@
 }
 
 .listItem:hover {
-    height: 6vh;
+    box-shadow: 1px 5px 7px black;
 }
 
 
@@ -42,18 +42,29 @@
     margin: auto;
 }
 .listItem__modal >h1{
+    margin-top: 15%;
+    text-align: center;
+}
+.listItem__modal >h4{
+    margin-top: 9px;
     text-align: center;
 }
 .listItem__modal >p{
     text-align: justify;
     padding: 35px;
 }
+.listItem__phrases{
+    padding-left: 15%;
+}
+.listItem__phrases> h5{
+    margin-bottom: 5px;
+}
 .listItem__btn{
     background-color: white;
     position:fixed;
-    margin-left: 5vw;
+    margin-left: 25vw;
     margin-top: 9px;
     border-radius: 100px;
     border: none;
-    box-shadow: 2px 2px 2px 2px ghostwhite;
+    box-shadow: 1px 2px 9px grey;
 }
