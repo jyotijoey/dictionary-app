@@ -51,7 +51,7 @@ app.get("/search", (req, res) => {
   });
 
 app.post("/search", function(req, res){
-    console.log(req);
+    console.log(JSON.stringify(req));
     const input = req.body.term;
     console.log(input);
     try {

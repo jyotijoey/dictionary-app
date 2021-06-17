@@ -14,7 +14,6 @@ useEffect(() => {
    const response = await axios.get("http://localhost:4000/search");
 
    setItem(response.data);
-  console.log(item);
    return response;
  }
 

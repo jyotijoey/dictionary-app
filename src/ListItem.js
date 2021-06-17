@@ -5,9 +5,9 @@ import "./ListItem.css";
 function ListItem({ item }) {
   return (
     <>
-      {item.map(({term, definition, phrase}) => {
+      {item.map(({term, definition, phrase, _id}) => {
         return (
-          <div className="listItem">
+          <div key={_id} className="listItem">
             <h1>{term}</h1>
             <p>{definition.substring(0, 35)}...</p>
           </div>
