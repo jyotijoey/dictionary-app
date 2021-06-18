@@ -47,14 +47,14 @@ function App() {
         {/* changing the button conditionally */}
         <button onClick={() => setClicked(!clicked)}>
           {clicked ? (
-            <CloseIcon className="app__searchIcon" />
+            <CloseIcon className="app__searchIcon" onClick={()=> setSearch("")}/>
           ) : (
             <SearchIcon className="app__searchIcon" />
           )}
         </button>
       </div>
       {/* search functionality */}
-      <Container item={search === "" ? item : filterItems} />
+      <Container item={search === ""? item : filterItems} />
       <AddBar />
     </div>
   );

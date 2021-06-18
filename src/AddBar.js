@@ -15,7 +15,7 @@ function SearchBar() {
         console.log("13");
         console.log(input);
         // to post data from backend
-        axios.post("http://localhost:4000/search",{
+        axios.post("https://fast-island-34255.herokuapp.com/search",{
             term: input.term
         })
         .then((res)=>{
