@@ -1,3 +1,11 @@
+.listItem__container{
+    display: flex;
+}
+.listItem__items{
+    flex: 1;
+    position:inherit;
+}
+
 .listItem{
     height: 10vh;
     /* box-shadow: black 1px 2px 3px; */
@@ -6,6 +14,7 @@
     margin-top: 2px;
     padding-top: 7px;
     justify-content:flex-start;
+    position:static;
     /* border-radius: 5px; */
 }
 .listItem__head{

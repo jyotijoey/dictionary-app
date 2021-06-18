@@ -23,15 +23,16 @@ function ListItem({ item }) {
     console.log(value._id);
   }
   return (
-    <>
-    <div className="listItem__head">
-    <h3 className="listItem__header">Word List</h3>
-    <div className="listItem__border"></div>
-    </div>
+    <div className="listItem__container">
+      <div className="listItem__head">
+        <h3 className="listItem__header">Word List</h3>
+        <div className="listItem__border"></div>
+      </div>
+      <div className="listItem__items">
       {item.map(
         ({ term, definition, phrase, _id, sDefinition, spell, phrase2 }) => {
           return (
-            <div>
+            <>
               <div
                 key={_id}
                 className="listItem"
@@ -53,28 +54,29 @@ function ListItem({ item }) {
               <div className="listItem__border"></div>
 
               <Modal className="listItem__modal" isOpen={open}>
-              <button
-                    className="listItem__btn"
-                    onClick={() => setOpen(false)}
-                  >
-                    <CloseIcon />
-                  </button>
+                <button
+                  className="listItem__btn"
+                  onClick={() => setOpen(false)}
+                >
+                  <CloseIcon />
+                </button>
                 <h1>{value.term}</h1>
                 <div className="listItem__border"></div>
                 <h4>{value?.sDefinition}</h4>
                 <h4>Phonetic Spelling: {value?.spell}</h4>
                 <p>{value?.definition}</p>
                 <div className="listItem__phrases">
-                <h5>Used Cases</h5>
-                <li>{value?.phrase}</li>
-                <li>{value?.phrase2}</li>
+                  <h5>Used Cases</h5>
+                  <li>{value?.phrase}</li>
+                  <li>{value?.phrase2}</li>
                 </div>
               </Modal>
-            </div>
+            </>
           );
         }
       )}
-    </>
+      </div>
+    </div>
   );
 }
 

@@ -20,7 +20,7 @@ function App() {
     }
 
     fetchPosts();
-  }, []);
+  }, [item]);
 
   const filterItems = item.filter((word) => {
     return word.term.toLowerCase().includes(search.toLowerCase());

@@ -19,7 +19,7 @@ function SearchBar() {
         });
 
         setInput({term:""});
-        
+        window.location.reload();
     }
 
     function Handle(e){
