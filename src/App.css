@@ -31,3 +31,40 @@
   margin-left: 47%;
   margin-top: 50%;
 }
+.app__searchBar{
+  display: flex;
+  position: absolute;
+  margin-top: 5%;
+}
+.app__searchBar>input{
+  height: 5vh;
+  width: 23.5vw;
+  background: transparent;
+  text-align: left;
+  padding-left: 38px;
+  color: white;
+  border: none;
+  outline: none;
+}
+.app__searchBar>h2{
+  color: white;
+  font-weight: 800;
+  padding-left: 40px;
+  flex: auto;
+  padding-right: 16vw;
+  margin-top: 4px;
+}
+.app__searchBar>button{
+  background: transparent;
+  border: none;
+}
+.app__searchIcon{
+  color: white;
+  padding: 5px;
+}
+.app__searchBar>input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+  text-align:left;
+  font-size: medium;
+}

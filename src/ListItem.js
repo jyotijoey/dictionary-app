@@ -24,8 +24,10 @@ function ListItem({ item }) {
   }
   return (
     <>
+    <div className="listItem__head">
     <h3 className="listItem__header">Word List</h3>
     <div className="listItem__border"></div>
+    </div>
       {item.map(
         ({ term, definition, phrase, _id, sDefinition, spell, phrase2 }) => {
           return (
@@ -58,6 +60,7 @@ function ListItem({ item }) {
                     <CloseIcon />
                   </button>
                 <h1>{value.term}</h1>
+                <div className="listItem__border"></div>
                 <h4>{value?.sDefinition}</h4>
                 <h4>Phonetic Spelling: {value?.spell}</h4>
                 <p>{value?.definition}</p>

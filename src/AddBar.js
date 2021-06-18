@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "./AddBar.css";
-import SearchIcon from '@material-ui/icons/Search';
 import axios from 'axios';
 
 
@@ -17,7 +16,10 @@ function SearchBar() {
         })
         .then((res)=>{
             console.log(res.data);
-        })
+        });
+
+        setInput({term:""});
+        
     }
 
     function Handle(e){
@@ -38,6 +40,7 @@ function SearchBar() {
                 type="text"
                 onChange={(e)=> Handle(e)}  
                 name="term"
+                value={input.term}
                 placeholder="Add a new term"
                 autoComplete="off"
             /> 
