@@ -69,12 +69,12 @@
   font-size: medium;
 }
 
-@media screen and (min-width: 400px) and (max-width: 665px) {
+@media screen and (min-width: 300px) and (max-width: 665px) {
     .app{
       width: 99.5vw;
     }
 }
-@media screen and (min-width: 400px) and (max-width: 665px) {
+@media screen and (min-width: 300px) and (max-width: 665px) {
   .app__searchBar{
     width: 90vw;
     justify-content: space-between;
