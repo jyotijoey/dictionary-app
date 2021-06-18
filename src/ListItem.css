@@ -97,7 +97,7 @@
     background: transparent;
 }
 
-@media screen and (min-width: 300px) and (max-width: 665px) {
+@media screen and (min-width: 200px) and (max-width: 665px) {
     .app{
       width: 99.5vw;
     }

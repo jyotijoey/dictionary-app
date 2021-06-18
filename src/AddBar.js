@@ -4,13 +4,17 @@ import axios from 'axios';
 
 
 function SearchBar() {
+    // to store the value of input as object
     const [input, setInput] = useState({
         term:"",
     });
     function Submit(e){
+        // to prevent the page from refreshing and getting redirected to backend
         e.preventDefault();
+        // making multiple consoles for debugging purpose
         console.log("13");
         console.log(input);
+        // to post data from backend
         axios.post("http://localhost:4000/search",{
             term: input.term
         })
@@ -19,6 +23,7 @@ function SearchBar() {
         });
 
         setInput({term:""});
+        // to load the new list item
         window.location.reload();
     }
 
@@ -45,7 +50,6 @@ function SearchBar() {
                 autoComplete="off"
             /> 
             <button onSubmit={()=> input} type="submit">
-            {/* <SearchIcon className="searchBar__icon"/> */}
             </button>
         </form>
         

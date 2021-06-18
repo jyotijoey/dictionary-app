@@ -11,10 +11,12 @@ function App() {
   const [search, setSearch] = useState("");
   const [clicked, setClicked] = useState(false);
 
+  // to fetch the value of list items from backend
   useEffect(() => {
+    // using async and await to wait for the data tobe fetched and not leave the stack before the work is done
     async function fetchPosts() {
       const response = await axios.get("http://localhost:4000/search");
-
+      // storing the value into item
       setItem(response.data);
       return response;
     }
@@ -22,6 +24,7 @@ function App() {
     fetchPosts();
   }, [item]);
 
+  // to find the search term in the list
   const filterItems = item.filter((word) => {
     return word.term.toLowerCase().includes(search.toLowerCase());
   });
@@ -30,6 +33,7 @@ function App() {
     // using BEM
     <div className="app">
       <div className="app__searchBar">
+      {/* conditionally displaying the input button */}
       {clicked?
         <input
           type="text"
@@ -39,10 +43,13 @@ function App() {
         :
         <h2>Jyoti's APP</h2>
       }
+
+      {/* changing the button conditionally */}
         <button onClick={()=> setClicked(!clicked) }>
         {clicked?<CloseIcon className="app__searchIcon"/> : <SearchIcon className="app__searchIcon"/>}
         </button>
       </div>
+      {/* search functionality */}
       <Container item={search === "" ? item : filterItems} />
       <AddBar />
     </div>
