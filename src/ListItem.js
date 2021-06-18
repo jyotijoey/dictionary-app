@@ -29,7 +29,7 @@ function ListItem({ item }) {
     <div className="listItem__container">
       <div className="listItem__head">
         <h3 className="listItem__header">Word List</h3>
-        <div className="listItem__border"></div>
+        <div className="listItem__headBorder"></div>
       </div>
       <div className="listItem__items">
         {/* to map each item in the items list */}

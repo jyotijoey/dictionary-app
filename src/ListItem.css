@@ -31,14 +31,21 @@
     margin-left: 5%;
 }
 
-.listItem__border{
-    width: 400px;
+.listItem__headBorder{
+    width: 25vw;
     margin: auto;
     border: none;
     border-bottom: 1px inset 	#F5F5F5;
     box-shadow: 1px 1px 1px 	#F5F5F5;
 }
-
+.listItem__border{
+    width: 28vw;
+    margin: auto;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 1px inset 	#F5F5F5;
+    box-shadow: 1px 1px 1px 	#F5F5F5;
+}
 
 .listItem > h1{
     margin: auto;
@@ -113,5 +120,10 @@
 .listItem__head> .listItem__border{
     width: 350px;
 }
-
+.listItem__headBorder{
+    width: 90vw;
+}
+.listItem__border{
+    width: 90vw;
+}
 }
