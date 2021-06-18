@@ -2,7 +2,7 @@
     display: flex;
 }
 .listItem__items{
-    flex: 1;
+    margin-top: 50px;
     position:inherit;
 }
 
@@ -10,6 +10,7 @@
     height: 10vh;
     /* box-shadow: black 1px 2px 3px; */
     display: flex;
+
     flex-direction: column;
     margin-top: 2px;
     padding-top: 7px;
@@ -24,6 +25,7 @@
     margin-left: 18px;
     box-shadow: none;
     padding: 6px;
+    width: 26vw;
 }
 .listItem__header{
     margin-top: 10px;
@@ -94,4 +96,28 @@
     border-radius: 100px;
     border: none;
     background: transparent;
+}
+
+@media screen and (min-width: 400px) and (max-width: 665px) {
+    .app{
+      width: 99.5vw;
+    }
+    .listItem__modal{
+    width: 99.5vw;
+}
+.listItem__btn{
+    margin-left: 90vw;
+}
+.listItem__head{
+    width: 86%;
+}
+.listItem__head> .listItem__border{
+    width: 350px;
+}
+}
+@media screen and (min-width: 400px) and (max-width: 665px) {
+    
+}
+@media screen and (min-width: 400px) and (max-width: 665px) {
+    
 }

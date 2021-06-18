@@ -31,3 +31,10 @@ form> button{
  background-color: unset;
  border:none;
 }
+
+@media screen and (min-width: 400px) and (max-width: 665px) {
+    .searchBar > input{
+        width: 70%;
+        margin-left: 15%;
+    }
+}

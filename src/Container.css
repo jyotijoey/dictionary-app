@@ -26,3 +26,9 @@
     background: none;
     border-radius: 10px;
    }
+
+@media screen and (min-width: 400px) and (max-width: 665px) {
+    .container{
+      width: 99.5vw;
+    }
+}
