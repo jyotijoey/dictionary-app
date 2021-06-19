@@ -1,6 +1,6 @@
 /* for the background */
 .app{
-  background-color: brown;
+  background-color: #69055d;
   height: 99.5vh;
   width: 30vw;
   border: 1px solid black;
@@ -9,8 +9,9 @@
 }
 
 .app> button{
-  margin-top: 93vh;
-  margin-left: 49%;
+  position: relative;
+  margin-top: 80vh;
+  margin-left: 80%;
 }
 
 .app__modal{

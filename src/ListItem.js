@@ -4,6 +4,7 @@ import "./ListItem.css";
 import Modal from "react-modal";
 import CloseIcon from "@material-ui/icons/Close";
 
+Modal.setAppElement("#root");
 function ListItem({ item }) {
   // to handle the opening and closing of modal
   const [open, setOpen] = useState(false);
