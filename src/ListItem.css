@@ -5,7 +5,10 @@
     margin-top: 50px;
     position:inherit;
 }
-
+.listItem__items{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .listItem{
     height: 10vh;
     /* box-shadow: black 1px 2px 3px; */

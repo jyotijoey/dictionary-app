@@ -10,7 +10,7 @@ function App() {
   const [item, setItem] = useState([]);
   const [search, setSearch] = useState("");
   const [clicked, setClicked] = useState(false);
-  const [added, setAdded] = useState(true);
+  
   // to fetch the value of list items from backend
   useEffect(() => {
     // using async and await to wait for the data tobe fetched and not leave the stack before the work is done
