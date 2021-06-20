@@ -24,14 +24,15 @@
     position: fixed;
     background-color: white;
     border: none;
-    margin-left: 18px;
+    margin-left: .5vw;
     box-shadow: none;
     padding: 6px;
-    width: 26vw;
+    width: 28vw;
+    border-radius: 15%;
 }
 .listItem__header{
     margin-top: 10px;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 
 .listItem__headBorder{
@@ -119,6 +120,7 @@
 }
 .listItem__head{
     width: 86%;
+    margin-left: 5vw;
 }
 .listItem__head> .listItem__border{
     width: 350px;
@@ -128,5 +130,8 @@
 }
 .listItem__border{
     width: 90vw;
+}
+.listItem__header{
+    margin-left: 5%;
 }
 }
